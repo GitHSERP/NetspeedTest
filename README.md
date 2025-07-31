@@ -42,7 +42,8 @@ DO WriteDbfWithUI WITH ;
 
 
 🧑‍💻 需求環境
-Visual FoxPro 9.0 或相容版本(執行原始碼用,如要使用執行speedtest.exe測試則非必要)
+Visual FoxPro 9.0 或相容版本
+(執行原始碼用,如要使用執行speedtest.exe測試則非必要)
 
 Windows 7/10/11
 
