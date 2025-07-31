@@ -1,4 +1,4 @@
-# NetspeedTest
+# speedtest.exe
 VFP 網路磁碟機寫入檔案測試程式
 
 # 🧪 FoxPro 網路磁碟機寫入測試工具
@@ -14,17 +14,9 @@ VFP 網路磁碟機寫入檔案測試程式
 
 ## 🚀 執行方法
 
-### 1️⃣ 開啟 Visual FoxPro
+### 1️⃣ 開啟 Visual FoxPro (如果要執行原代碼)
 
-### 2️⃣ 執行主程式（建議打包為 `.PRG` 或 `.APP`）
-
-```foxpro
-DO WriteDbfWithUI WITH ;
-   "Z:\FoxProTestWrapped\", ;  && 寫入路徑
-   10000, ;                  && 資料總筆數
-   2000, ;                   && 每檔筆數
-   50, ;                     && 欄位數
-   3                        && 索引欄位數
+### 2️⃣ 執行主程式（建議直接執行speedtest.exe）
 
 
 
