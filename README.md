@@ -1,8 +1,8 @@
 # speedtest.exe
 VFP 網路磁碟機寫入檔案測試程式
-<img width="1511" height="820" alt="Image" src="https://github.com/user-attachments/assets/0e05f08d-69d5-4419-a62c-32922093217a" />
-# 🧪 FoxPro 網路磁碟機寫入測試工具
 
+# 🧪 FoxPro 網路磁碟機寫入測試工具
+<img width="1511" height="820" alt="Image" src="https://github.com/user-attachments/assets/0e05f08d-69d5-4419-a62c-32922093217a" />
 這是一個使用 Visual FoxPro 撰寫的工具，用來測試 **網路磁碟機（如 Z:\）在大量資料寫入時的效能與穩定性**，同時支援：
 
 - ✅ 可參數設置寫入DBF檔案 索引 數量
