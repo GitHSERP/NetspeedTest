@@ -14,7 +14,7 @@ VFP 網路磁碟機寫入檔案測試程式
 
 ## 🚀 執行方法
 
-### 1️⃣ 開啟 Visual FoxPro (如果要執行原代碼)
+### 方法1️⃣ 開啟 Visual FoxPro (如果要執行原代碼)
 foxpro
 DO WriteDbfWithUI WITH ;
    "Z:\FoxProTestWrapped\", ;  && 寫入路徑
@@ -23,7 +23,7 @@ DO WriteDbfWithUI WITH ;
    50, ;                     && 欄位數
    3                        && 索引欄位數
 
-### 2️⃣ 執行主程式（建議直接執行speedtest.exe）
+### 方法2️⃣ 執行主程式（建議直接執行speedtest.exe）
 
 
 
