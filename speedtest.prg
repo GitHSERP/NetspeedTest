@@ -1,13 +1,13 @@
 
 Function myRunProc
 Lparameters lnTotalRecords,lnPerFile,lnFieldCount , lnIndexCount, lcPath
-*lnTotalRecords = 1000000         && ¸ê®ÆÁ`µ§¼Æ
-*lnPerFile = 2000               && ¨C­Ó DBF ªºµ§¼Æ
-*lnFieldCount = 50              && Äæ¦ì¼Æ¶q
-*lnIndexCount = 3               && ­n«Ø¥ß¯Á¤ŞªºÄæ¦ì¼Æ¡]±q col1 ¶}©l¡^
-*lcPath = "c:\test\" && ¦sÀÉ¸ô®|
+*lnTotalRecords = 100000         && è³‡æ–™ç¸½ç­†æ•¸
+*lnPerFile = 2000               && æ¯å€‹ DBF çš„ç­†æ•¸
+*lnFieldCount = 50              && æ¬„ä½æ•¸é‡
+*lnIndexCount = 3               && è¦å»ºç«‹ç´¢å¼•çš„æ¬„ä½æ•¸ï¼ˆå¾ col1 é–‹å§‹ï¼‰
+*lcPath = "c:\test\" && å­˜æª”è·¯å¾‘
 
-* === °Ñ¼Æ³]©w ===
+* === åƒæ•¸è¨­å®š ===
 Local lnStart, lnEnd
 Local lnFileCount, lnFileNo, i, j, lcDbfName, lcFieldDef, lcInsert
 Local lnStartIndex, lnEndIndex, lcIndexCmd
@@ -16,24 +16,24 @@ Local lnStartIndex, lnEndIndex, lcIndexCmd
 
 lnFileCount = Ceiling(lnTotalRecords / lnPerFile)
 
-* «Ø¥ß¸ê®Æ§¨
+* å»ºç«‹è³‡æ–™å¤¾
 If !Directory(lcPath)
    Md (lcPath)
 Endif
 
-* ¶}©l­p®É
+* é–‹å§‹è¨ˆæ™‚
 lnStart = Seconds()
 
-* === «Ø¥ß¦h­Ó DBF ÀÉ®× ===
+* === å»ºç«‹å¤šå€‹ DBF æª”æ¡ˆ ===
 For lnFileNo = 1 To lnFileCount
    lcDbfName = lcPath + "TestData_" + Transform(lnFileNo) + ".dbf"
 
-   * §R°£ÂÂÀÉ
+   * åˆªé™¤èˆŠæª”
    If File(lcDbfName)
       Delete File (lcDbfName)
    Endif
 
-   * ²Õ¦XÄæ¦ì©w¸q
+   * çµ„åˆæ¬„ä½å®šç¾©
    lcFieldDef = ""
    For j = 1 To lnFieldCount
       lcFieldDef = lcFieldDef + "col" + Transform(j) + " C(20),"
@@ -41,11 +41,11 @@ For lnFileNo = 1 To lnFileCount
    lcFieldDef = Left(lcFieldDef, Len(lcFieldDef) - 1)
    *_cliptext =  lcFieldDef
    *MESSAGEBOX(lcFieldDef)
-   * «Ø¥ß¸ê®Æªí
+   * å»ºç«‹è³‡æ–™è¡¨
    Create Table (lcDbfName) (  &lcFieldDef. )
    Use (lcDbfName) Exclusive
 
-   * ¼g¤J¸ê®Æ
+   * å¯«å…¥è³‡æ–™
    lnStartIndex = (lnFileNo - 1) * lnPerFile + 1
    lnEndIndex = Min(lnFileNo * lnPerFile, lnTotalRecords)
 
@@ -58,7 +58,7 @@ For lnFileNo = 1 To lnFileCount
       &lcInsert
    Endfor
 
-   * «Ø¥ß¦h­Ó¯Á¤Ş¡]«e lnIndexCount ­ÓÄæ¦ì¡^
+   * å»ºç«‹å¤šå€‹ç´¢å¼•ï¼ˆå‰ lnIndexCount å€‹æ¬„ä½ï¼‰
    For j = 1 To Min(lnIndexCount, lnFieldCount)
       lcIndexCmd = "INDEX ON col" + Transform(j) + " TAG col" + Transform(j)
       &lcIndexCmd
@@ -66,17 +66,18 @@ For lnFileNo = 1 To lnFileCount
 
    USE
    
-   * §R°£ÂÂÀÉ
+   * åˆªé™¤èˆŠæª”
    *If File(lcDbfName)
    *   Delete File (FORCEEXT(lcDbfName,".*"))
    *Endif
 
-   Wait "§¹¦¨ÀÉ®×:"+  lcDbfName Window Nowait
+   Wait "å®Œæˆæª”æ¡ˆ:"+  lcDbfName Window Nowait
 Endfor
 
-* µ²§ô­p®É
+* çµæŸè¨ˆæ™‚
 lnEnd = Seconds()
-Messagebox( "Á`³B²z®É¶¡¡G" + Transform(lnEnd - lnStart) + " ¬í")
+Messagebox( "ç¸½è™•ç†æ™‚é–“ï¼š" + Transform(lnEnd - lnStart) + " ç§’")
+
 
 
 
