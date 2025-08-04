@@ -26,7 +26,7 @@ DO WriteDbfWithUI WITH ;
 ### 方法2️⃣ 執行主程式（建議直接執行speedtest.exe）
 
 
-
+## 🚀 測試結果參考
 
 | 測試結果分類       | 描述說明                                                              |
 |--------------------|------------------------------------------------------------------------|
@@ -37,6 +37,9 @@ DO WriteDbfWithUI WITH ;
 | 🐢 超過 100 秒       | 寫入緩慢，可能為低速網路、USB NAS、磁碟老化或防毒鎖檔導致                 |
 
 
+
+
+### 5000次 5個網路環境測試
 
 <img width="942" height="630" alt="Image" src="https://github.com/user-attachments/assets/a19eabc0-84bb-48a3-ba78-b62a1a7091dd" />
 
