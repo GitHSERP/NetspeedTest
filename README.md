@@ -36,8 +36,7 @@ Windows 7/10/11
 
 已掛載的網路磁碟機（如 Z:\）
 
-📝 授權
-本程式以 MIT 授權發佈，歡迎自由使用與修改。
+
 
 
 
@@ -59,3 +58,5 @@ Windows 7/10/11
 <img width="942" height="630" alt="Image" src="https://github.com/user-attachments/assets/a19eabc0-84bb-48a3-ba78-b62a1a7091dd" />
 
 
+## 📝 授權
+本程式以 MIT 授權發佈，歡迎自由使用與修改。
